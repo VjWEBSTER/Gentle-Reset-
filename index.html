@@ -11,7 +11,9 @@
 <meta property="og:type" content="website">
 <meta property="og:title" content="The Gentle Reset After 50">
 <meta property="og:description" content="A joint-friendly, evidence-based six-month plan for adults over 50.">
-<meta property="og:image" content="assets/og-image.jpg">
+<meta property="og:image" content="https://vjwebster.github.io/Gentle-Reset-/assets/og-image.jpg">
+<meta property="og:url" content="https://vjwebster.github.io/Gentle-Reset-/">
+<link rel="canonical" href="https://vjwebster.github.io/Gentle-Reset-/">
 <meta name="twitter:card" content="summary_large_image">
 
 <link rel="icon" type="image/png" href="assets/favicon.png">
@@ -21,6 +23,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Is this a diet book?", "acceptedAnswer": {"@type": "Answer", "text": "No. It focuses on sustainable habits: protein-first eating, gentle strength, walking, sleep and recovery. There is no calorie counting and no banned food list."}}, {"@type": "Question", "name": "Do I need a gym?", "acceptedAnswer": {"@type": "Answer", "text": "No. The movement plan uses your body weight and a chair, with optional light equipment. Every move has a gentler option for sore or stiff days."}}, {"@type": "Question", "name": "Is fasting required?", "acceptedAnswer": {"@type": "Answer", "text": "No. Intermittent fasting is presented as an optional tool, with clear guidance on who should skip it."}}, {"@type": "Question", "name": "Is this suitable for beginners?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. The plan starts with ten-minute walks and builds slowly, whatever your current fitness."}}, {"@type": "Question", "name": "Is it suitable for men and women?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. The principles apply to both, and the book includes a chapter on hormones and menopause."}}, {"@type": "Question", "name": "How quickly will I see results?", "acceptedAnswer": {"@type": "Answer", "text": "Steady progress beats fast change. Most people in well-run lifestyle programs lose around 5 to 10 percent of their starting weight over six months, and many notice better energy, sleep and strength sooner. Results vary from person to person."}}, {"@type": "Question", "name": "Is this medical advice?", "acceptedAnswer": {"@type": "Answer", "text": "No. The book is for general information and education. Check with your doctor before starting any new eating or exercise plan, especially if you have a health condition or take medication."}}, {"@type": "Question", "name": "What if it is not right for me?", "acceptedAnswer": {"@type": "Answer", "text": "You have 7 days from purchase to ask for a refund. Email mail.avb@gmx.com or use the refund link in your Gumroad receipt, and you will be refunded."}}, {"@type": "Question", "name": "What do I receive, and in what format?", "acceptedAnswer": {"@type": "Answer", "text": "You receive PDF files (the ebook, the Starter Guide and the Holiday and Eating Out Survival Guide) and an Excel tracker that also works in Google Sheets and Apple Numbers. Everything downloads instantly."}}]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Book", "name": "The Gentle Reset After 50", "author": {"@type": "Person", "name": "AL Webster"}, "publisher": {"@type": "Organization", "name": "Ageless Vitality Books"}, "inLanguage": "en", "bookFormat": "https://schema.org/EBook", "image": "https://vjwebster.github.io/Gentle-Reset-/assets/cover.jpg", "offers": {"@type": "Offer", "price": "17.49", "priceCurrency": "AUD", "availability": "https://schema.org/InStock", "url": "https://alanwebster.gumroad.com/l/bwxtjq"}}</script>
 <style>
 :root{
   --forest:#2E6B3F;      /* primary brand, matches the book covers */
@@ -159,14 +163,42 @@ footer{background:#fff;padding:26px 20px 40px;text-align:center;font-size:.9rem;
 .toast{position:fixed;left:50%;bottom:26px;transform:translateX(-50%) translateY(30px);background:var(--charcoal);color:#fff;padding:14px 24px;border-radius:40px;font-size:.95rem;opacity:0;pointer-events:none;transition:.3s;z-index:3000}
 .toast.on{opacity:1;transform:translateX(-50%) translateY(0)}
 
+
+/* v4 additions */
+.price-line{font-size:.95rem;color:var(--forest-dark);margin-top:12px}
+.price-line strong{font-size:1.05rem}
+.lookinside{overflow-x:clip}
+.swipe-hint{display:none}
+.lookinside img{display:block;width:100%;max-width:1000px;margin:0 auto;border-radius:14px;box-shadow:0 20px 50px rgba(0,0,0,.14)}
+.reviews[hidden]{display:none}
+.review-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.review{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:26px}
+.review .who{margin-top:12px;font-weight:600;color:var(--forest-dark);font-size:.9rem}
+footer a{color:var(--forest);font-weight:600}
+footer p+p{margin-top:8px;font-size:.82rem;max-width:760px;margin-left:auto;margin-right:auto}
+.sticky-bar{display:none}
 @media(max-width:900px){
-  section{padding:70px 0}
+  .li-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:0 -20px;padding:4px 20px 14px}
+  .li-scroll img{width:760px;max-width:none}
+  .swipe-hint{display:block;text-align:center;font-size:.85rem;color:var(--soft);margin-top:4px}
+  .sticky-bar{display:block;position:fixed;left:0;right:0;bottom:0;z-index:2500;background:rgba(255,255,255,.97);border-top:1px solid var(--line);padding:10px 16px calc(10px + env(safe-area-inset-bottom));transform:translateY(110%);transition:transform .3s}
+  .sticky-bar.on{transform:none}
+  .sticky-bar .btn{width:100%;padding:14px 20px}
+  body{padding-bottom:0}
+  .review-grid{grid-template-columns:1fr}
+}
+@media(max-width:900px){
+  section{padding:50px 0}
+  .section-sub{margin-bottom:32px}
+  .card{padding:24px 22px}
+  .cards{gap:16px}
+  .closer{margin-top:36px}
   .nav a:not(.btn){display:none}
   .hero{padding:40px 0 70px}
   .hero-grid,.offer,.lead{grid-template-columns:1fr;gap:36px}
   .cards{grid-template-columns:1fr}
-  .book-cover{order:-1}
-  .book-cover img{max-width:260px}
+  .book-cover{order:2}
+  .book-cover img{max-width:230px}
   .expect{padding:30px 26px}
   .bio{padding:32px 24px}
   .btn{width:100%;text-align:center}
@@ -187,8 +219,8 @@ footer{background:#fff;padding:26px 20px 40px;text-align:center;font-size:.9rem;
     <a href="#evidence">The Evidence</a>
     <a href="#inside">Inside the Book</a>
     <a href="#roadmap">Roadmap</a>
-    <a href="#free-guide">Free Guide</a>
-    <a class="btn btn-primary" href="#" data-link="book">Get the Book</a>
+    <a href="#look-inside">Look Inside</a>
+    <a class="btn btn-primary" href="#" data-link="guide">Free Guide</a>
   </nav>
 </div>
 </header>
@@ -202,16 +234,16 @@ footer{background:#fff;padding:26px 20px 40px;text-align:center;font-size:.9rem;
   <h1>Your Body Changed. The Strategy Should Too.</h1>
   <p class="hook">Small Habits. Steady Strength. Lasting Results.</p>
   <p class="sub">A joint-friendly, evidence-based six-month plan for adults over 50</p>
+  <p class="hero-text">Lose weight gently, rebuild strength and protect your energy with a practical roadmap built for the body you have now.</p>
+  <div class="btn-row" id="hero-cta">
+    <a class="btn btn-primary" href="#" data-link="guide">Get the Free 7 Day Starter Guide</a>
+    <a class="btn btn-secondary" href="#" data-link="book">Get the Book, A$17.49</a>
+  </div>
+  <p class="fine">Free guide: instant download, nothing to pay. Book: instant download, 7 day refund.</p>
+  <p class="nos" style="margin-top:22px">No crash diets. No punishing workouts. No impossible routines.</p>
   <div class="trust" aria-label="Key features">
     <span>Evidence-based</span><span>Joint-friendly</span><span>Sustainable</span><span>Built for adults 50+</span>
   </div>
-  <p class="hero-text">Lose weight gently, rebuild strength and protect your energy with a practical roadmap built for the body you have now.</p>
-  <p class="nos">No crash diets. No punishing workouts. No impossible routines.</p>
-  <div class="btn-row">
-    <a class="btn btn-primary" href="#" data-link="book">Get the Book</a>
-    <a class="btn btn-secondary" href="#" data-link="guide">Free 7 Day Starter Guide</a>
-  </div>
-  <p class="fine">Instant download. Includes three free bonuses.</p>
 </div>
 <div class="book-cover">
   <picture>
@@ -297,6 +329,19 @@ footer{background:#fff;padding:26px 20px 40px;text-align:center;font-size:.9rem;
 </div>
 </section>
 
+<!-- LOOK INSIDE -->
+<section class="alt lookinside" id="look-inside">
+<div class="container">
+<h2 class="section-title">Take a look inside</h2>
+<p class="section-sub">Three real pages from the book: the protein guide, the illustrated five minute warm-up and the six-month roadmap.</p>
+<div class="li-scroll"><picture>
+  <source srcset="assets/look-inside.webp" type="image/webp">
+  <img src="assets/look-inside.jpg" width="1200" height="680" loading="lazy" alt="Three sample pages from The Gentle Reset After 50: a protein guide table, the illustrated five minute warm-up and the six-month roadmap table">
+</picture></div>
+<p class="swipe-hint">Swipe to see all three pages</p>
+</div>
+</section>
+
 <!-- OFFER -->
 <section id="get-the-book">
 <div class="container offer">
@@ -315,7 +360,8 @@ footer{background:#fff;padding:26px 20px 40px;text-align:center;font-size:.9rem;
     <li>Holiday and Eating Out Survival Guide <span class="bonus-tag">FREE BONUS</span></li>
     <li>Fitness and Activity Tracker for Excel, Google Sheets and Numbers <span class="bonus-tag">FREE BONUS</span></li>
   </ul>
-  <div class="btn-row"><a class="btn btn-primary" href="#" data-link="book">Get the Book</a></div>
+  <div class="btn-row"><a class="btn btn-primary" href="#" data-link="book">Get the Book, A$17.49</a></div>
+  <p class="price-line"><strong>A$17.49</strong> one-time payment. 7 day refund.</p>
   <p class="fine">Instant download. Read on your phone, tablet or computer, or print it.</p>
 </div>
 </div>
@@ -361,6 +407,18 @@ footer{background:#fff;padding:26px 20px 40px;text-align:center;font-size:.9rem;
 </div>
 </section>
 
+<!-- REVIEWS (hidden until you have real reader quotes: remove the word hidden from the section tag, then edit the three cards) -->
+<section class="reviews" id="reviews" hidden>
+<div class="container">
+<h2 class="section-title">What readers say</h2>
+<div class="review-grid">
+  <div class="review"><p>"Add a real reader quote here."</p><p class="who">First name, town</p></div>
+  <div class="review"><p>"Add a real reader quote here."</p><p class="who">First name, town</p></div>
+  <div class="review"><p>"Add a real reader quote here."</p><p class="who">First name, town</p></div>
+</div>
+</div>
+</section>
+
 <!-- FAQ -->
 <section>
 <div class="container">
@@ -374,6 +432,7 @@ footer{background:#fff;padding:26px 20px 40px;text-align:center;font-size:.9rem;
   <details><summary>Is it suitable for men and women?</summary><p>Yes. The principles apply to both, and the book includes a chapter on hormones and menopause.</p></details>
   <details><summary>How quickly will I see results?</summary><p>Steady progress beats fast change. Most people in well-run lifestyle programs lose around 5 to 10 percent of their starting weight over six months, and many notice better energy, sleep and strength sooner. Results vary from person to person.</p></details>
   <details><summary>Is this medical advice?</summary><p>No. The book is for general information and education. Check with your doctor before starting any new eating or exercise plan, especially if you have a health condition or take medication.</p></details>
+  <details><summary>What if it is not right for me?</summary><p>You have 7 days from purchase to ask for a refund. Email mail.avb@gmx.com or use the refund link in your Gumroad receipt, and you will be refunded.</p></details>
   <details><summary>What do I receive, and in what format?</summary><p>You receive PDF files (the ebook, the Starter Guide and the Holiday and Eating Out Survival Guide) and an Excel tracker that also works in Google Sheets and Apple Numbers. Everything downloads instantly.</p></details>
 </div>
 </div>
@@ -382,10 +441,10 @@ footer{background:#fff;padding:26px 20px 40px;text-align:center;font-size:.9rem;
 <!-- FINAL CTA -->
 <section class="final">
 <h2>Your gentle reset starts this week</h2>
-<p>Begin with the free Starter Guide, or get the full six-month plan and all three bonuses today.</p>
+<p>Begin with the free Starter Guide, or get the full six-month plan and all three bonuses today, with a 7 day refund.</p>
 <div class="btn-row">
-  <a class="btn btn-light" href="#" data-link="book">Get the Book</a>
-  <a class="btn" style="color:#fff;border-color:#fff" href="#" data-link="guide">Free Starter Guide</a>
+  <a class="btn btn-light" href="#" data-link="guide">Get the Free Starter Guide</a>
+  <a class="btn" style="color:#fff;border-color:#fff" href="#" data-link="book">Get the Book, A$17.49</a>
 </div>
 </section>
 
@@ -393,7 +452,11 @@ footer{background:#fff;padding:26px 20px 40px;text-align:center;font-size:.9rem;
 
 <div class="disclaimer"><div class="container"><p><strong>Important:</strong> This website and the books it describes are for general information and education only and are not medical advice. Individual results vary. Check with your doctor or another qualified health professional before changing how you eat or exercise, particularly if you have a medical condition, take medication, are pregnant or breastfeeding, or have a history of an eating disorder.</p></div></div>
 
-<footer>&copy; 2026 AL Webster &middot; Ageless Vitality Books</footer>
+<footer>
+<p>&copy; 2026 AL Webster &middot; Ageless Vitality Books &middot; <a href="mailto:mail.avb@gmx.com">mail.avb@gmx.com</a></p>
+<p>Privacy: this page sets no cookies and collects no personal data. Fonts load from Google Fonts. Purchases and downloads are handled by Gumroad under its own privacy policy. Questions or refund requests: email mail.avb@gmx.com.</p>
+</footer>
+<div class="sticky-bar" id="sticky-bar"><a class="btn btn-primary" href="#" data-link="guide">Get the Free 7 Day Starter Guide</a></div>
 
 <div class="toast" id="toast" role="status" aria-live="polite">This link is coming soon.</div>
 
@@ -409,9 +472,16 @@ var LINKS = {
 };
 
 (function(){
+  /* pass pin tracking through to Gumroad (utm_source, utm_medium, utm_campaign, utm_content, ref) */
+  var utm = (function(){
+    var out = [], q = window.location.search.replace(/^\?/, "").split("&");
+    q.forEach(function(p){ if (/^(utm_[a-z]+|ref)=/i.test(p)) out.push(p); });
+    return out.join("&");
+  })();
   var toast = document.getElementById("toast"), timer;
   document.querySelectorAll("[data-link]").forEach(function(a){
     var url = LINKS[a.getAttribute("data-link")];
+    if (url && utm) { url += (url.indexOf("?") > -1 ? "&" : "?") + utm; }
     if (url) { a.href = url; a.target = "_blank"; a.rel = "noopener"; return; }
     a.addEventListener("click", function(e){
       e.preventDefault();
@@ -420,6 +490,16 @@ var LINKS = {
       timer = setTimeout(function(){ toast.classList.remove("on"); }, 2400);
     });
   });
+})();
+
+/* sticky mobile bar: show once the hero buttons and final section are off screen */
+(function(){
+  var bar = document.getElementById("sticky-bar"), hero = document.getElementById("hero-cta"), fin = document.querySelector(".final");
+  if (!bar || !hero || !("IntersectionObserver" in window)) return;
+  var vis = {hero:true, fin:false};
+  function update(){ bar.classList.toggle("on", !vis.hero && !vis.fin); }
+  new IntersectionObserver(function(e){ vis.hero = e[0].isIntersecting; update(); }).observe(hero);
+  if (fin) new IntersectionObserver(function(e){ vis.fin = e[0].isIntersecting; update(); }).observe(fin);
 })();
 </script>
 </body>
